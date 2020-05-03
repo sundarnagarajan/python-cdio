@@ -146,18 +146,20 @@ for lib_name in ("libcdio", "libiso9660"):
         )
     )
 
-setup(
-    author=author,
-    author_email=author_email,
-    classifiers=classifiers,
-    cmdclass={"build": custom_build},
-    description=short_desc,
-    ext_modules=modules,
-    license=license,
-    long_description=long_description,
-    name=modname,
-    py_modules=["cdio", "iso9660", "pycdio", "pyiso9660"],
-    test_suite="nose.collector",
-    url=web,
-    version=VERSION,
-)
+
+if __name__ == '__main__':
+    setup(
+        author=author,
+        author_email=author_email,
+        classifiers=classifiers,
+        cmdclass={"build": custom_build},
+        description=short_desc,
+        ext_modules=modules,
+        license=license,
+        long_description=long_description,
+        name=modname,
+        py_modules=["cdio", "iso9660", "pycdio", "pyiso9660"],
+        test_suite="nose.collector",
+        url=web,
+        version=VERSION,
+    )
